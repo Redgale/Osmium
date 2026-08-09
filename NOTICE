@@ -1,0 +1,14 @@
+Osmium Shell Builder
+Copyright (C) 2026 RedGale7 and Osmium contributors
+
+Osmium v0.3 and later are distributed under GPL version 3 without warranty.
+The repository's LICENSE file contains the complete terms.
+
+Osmium includes or integrates third-party software. Copyright, license, source,
+and usage details are recorded in THIRD_PARTY_NOTICES.md. The vendored
+TIVarsLib license is also retained at public/vendor/TIVarsLib-LICENSE.txt.
+
+Osmium is independent software. Cesium was a conceptual reference only; no
+Cesium source code or branding is included. Osmium is not affiliated with the
+Cesium development team or Texas Instruments.
+

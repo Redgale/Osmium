@@ -1,0 +1,5 @@
+ClrHome
+Disp "OSMIUM DEMO"
+Disp "PURE TI-BASIC"
+Disp "RETURN REPAIR READY"
+Pause 

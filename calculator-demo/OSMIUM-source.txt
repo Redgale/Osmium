@@ -1,0 +1,221 @@
+1→P
+1→S
+0→R
+0→D
+Full
+AxesOff
+GridOff
+BackgroundOn DARKGRAY
+ClrDraw
+TextColor(YELLOW)
+Text(55,116,"OSMIUM")
+TextColor(LTGRAY)
+Text(78,88,"PURE TI-BASIC SHELL")
+For(K,1,180)
+End
+Lbl MN
+Full
+AxesOff
+GridOff
+BackgroundOn DARKGRAY
+ClrDraw
+TextColor(WHITE)
+Text(4,7,"OSMIUM")
+If P=1
+Then
+1→N
+TextColor(LTGRAY)
+Text(4,238,"1/2")
+TextColor(LTBLUE)
+Text(24,7,"FAVORITES")
+TextColor(LTGRAY)
+Text(46,23,"OSMIUM DEMO")
+If S=1
+Then
+TextColor(YELLOW)
+Text(46,8,">")
+Text(46,23,"OSMIUM DEMO")
+End
+End
+If P=2
+Then
+1→N
+TextColor(LTGRAY)
+Text(4,238,"2/2")
+TextColor(LTBLUE)
+Text(24,7,"DEMOS")
+TextColor(LTGRAY)
+Text(46,23,"OSMIUM DEMO")
+If S=1
+Then
+TextColor(YELLOW)
+Text(46,8,">")
+Text(46,23,"OSMIUM DEMO")
+End
+End
+TextColor(LTGRAY)
+Text(148,7,"ALPHA SEARCH   MODE INFO")
+Lbl KY
+0→K
+Repeat K
+getKey→K
+End
+If K=45:Goto QT
+If K=22:Goto ST
+If K=31:Goto SE
+If K=105 or K=21:Goto EX
+If K=25 and S>1
+Then
+S-1→S
+End
+If K=25:Goto MN
+If K=34 and S<N
+Then
+S+1→S
+End
+If K=34:Goto MN
+If K=24
+Then
+P-1→P
+If P=0:2→P
+1→S
+End
+If K=24:Goto MN
+If K=26
+Then
+P+1→P
+If P>2:1→P
+1→S
+End
+If K=26:Goto MN
+Goto KY
+Lbl EX
+0→D
+If P=1 and S=1:1→D
+If P=2 and S=1:1→D
+Goto DX
+Lbl DX
+If D=1
+Then
+BackgroundOff
+ClrHome
+prgmOSMDEMO
+1→R
+2→P
+1→S
+0→D
+End
+Goto MN
+Lbl SE
+BackgroundOff
+ClrHome
+Disp "USE QUOTED UPPERCASE"
+Input "SEARCH:",Str9
+0→G
+0→dim(L6)
+Full
+AxesOff
+GridOff
+BackgroundOn DARKGRAY
+ClrDraw
+TextColor(WHITE)
+Text(4,7,"SEARCH RESULTS")
+TextColor(LTGRAY)
+If (inString("OSMIUM DEMO",Str9) or inString("OSMDEMO",Str9)) and G<6
+Then
+G+1→G
+1→L6(G)
+Text(30+18G,23,"OSMIUM DEMO")
+End
+If G=0
+Then
+TextColor(LTBLUE)
+Text(70,70,"NO MATCHES - PRESS A KEY")
+Pause 
+End
+If G=0:Goto MN
+1→S
+Lbl SK
+TextColor(YELLOW)
+Text(30+18S,8,">")
+0→D
+0→K
+Repeat K
+getKey→K
+End
+If K=45:Goto MN
+If K=105 or K=21:L6(S)→D
+If D>0:Goto DX
+If K=25 and S>1
+Then
+TextColor(DARKGRAY)
+Text(30+18S,8,">")
+S-1→S
+End
+If K=34 and S<G
+Then
+TextColor(DARKGRAY)
+Text(30+18S,8,">")
+S+1→S
+End
+Goto SK
+Lbl ST
+0→D
+Full
+AxesOff
+GridOff
+BackgroundOn DARKGRAY
+ClrDraw
+TextColor(WHITE)
+Text(4,7,"OSMIUM INFO")
+TextColor(LTBLUE)
+Text(30,7,"1 PROGRAM / 2 PAGES")
+TextColor(LTGRAY)
+Text(54,7,"ALPHA  SEARCH")
+Text(72,7,"1 COMPILED FAVORITES")
+Text(96,7,"ENTER  RUN RECENT")
+If R=0
+Then
+TextColor(LTBLUE)
+Text(116,7,"NO RECENT PROGRAM")
+End
+If R=1:Then:TextColor(YELLOW):Text(116,7,"OSMIUM DEMO"):End
+TextColor(LTGRAY)
+Text(148,7,"CLEAR BACK   MODE ABOUT")
+0→K
+Repeat K
+getKey→K
+End
+If K=45:Goto MN
+If K=22:Goto AB
+If K=31:Goto SE
+If (K=105 or K=21) and R>0:R→D
+If D>0:Goto DX
+Goto ST
+Lbl AB
+Full
+AxesOff
+GridOff
+BackgroundOn DARKGRAY
+ClrDraw
+TextColor(YELLOW)
+Text(14,7,"OSMIUM")
+TextColor(WHITE)
+Text(42,7,"PURE TI-BASIC LAUNCHER")
+TextColor(LTGRAY)
+Text(66,7,"OS 5.8.5 COMPATIBLE")
+Text(86,7,"UP/DOWN SELECT")
+Text(104,7,"LEFT/RIGHT PAGE")
+Text(122,7,"ENTER/2ND LAUNCH")
+TextColor(LTBLUE)
+Text(148,7,"PRESS ANY KEY TO RETURN")
+Pause 
+Goto MN
+Lbl QT
+BackgroundOff
+TextColor(BLACK)
+AxesOn
+GridOff
+ClrDraw
+ClrHome
+Stop
