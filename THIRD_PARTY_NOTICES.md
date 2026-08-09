@@ -82,13 +82,5 @@ repositories contain the full license notices and contributor lists.
 | [tsx](https://github.com/privatenumber/tsx) | 4.23.11 | MIT | TypeScript script/test execution |
 | [Vite React plugins](https://github.com/vitejs/vite-plugin-react) | 6.0.2 / 0.5.26 | MIT | React and RSC transforms |
 
-### Geist typeface
-
-- Project: <https://github.com/vercel/geist-font>
-- Copyright: 2023 Vercel, in collaboration with basement.studio
-- License: SIL Open Font License 1.1
-- Use in Osmium: the browser interface requests Geist Sans and Geist Mono
-  through Next.js font handling.
-
 Transitive packages and their exact resolved versions are listed in
 `package-lock.json`. No third-party project listed above endorses Osmium.

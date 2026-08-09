@@ -6,6 +6,8 @@ All notable changes to Osmium are documented here.
 
 - Made build-script chaining independent of executable file-mode preservation,
   fixing Cloudflare builds from source archives committed through Windows.
+- Removed build-time Google font downloads so restricted CI environments cannot
+  stall before Vinext begins transforming the application.
 - Fixed invalid `Text(` coordinates by keeping generated graph-screen values in
   the TI-84 Plus CE's legal ranges.
 - Added a full generated-source audit for coordinates, command delimiters,
