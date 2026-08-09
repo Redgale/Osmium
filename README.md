@@ -9,7 +9,7 @@ Osmium is an independent, browser-based launcher builder for pure TI-BASIC
 programs on the TI-84 Plus CE. Select your `.8xp` programs, arrange the menu,
 and download or send a tokenized `OSMIUM.8xp` directly from the browser.
 
-Try the hosted builder: <https://osmium-shell-builder.redgale7.chatgpt.site>
+Try the hosted builder: <https://osmium.red-gale7.workers.dev>
 
 ## What Osmium is
 
