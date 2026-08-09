@@ -4,6 +4,8 @@ All notable changes to Osmium are documented here.
 
 ## [0.3.2] - 2026-08-08
 
+- Made build-script chaining independent of executable file-mode preservation,
+  fixing Cloudflare builds from source archives committed through Windows.
 - Fixed invalid `Text(` coordinates by keeping generated graph-screen values in
   the TI-84 Plus CE's legal ranges.
 - Added a full generated-source audit for coordinates, command delimiters,
@@ -33,4 +35,3 @@ All notable changes to Osmium are documented here.
 ## [0.1.0] - 2026-08-07
 
 - Initial browser-based TI-BASIC launcher generator and calculator demo.
-
